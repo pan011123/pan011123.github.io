@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>Spark On YARN - Hexo</title>
+  <title>Spark StandAlone - Hexo</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,21 +16,30 @@
     <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
 
   <link rel="shortcut icon" href="/images/head/head.jpg" type="image/png" />
-  <meta name="description" content="Spark On YARN">
+  <meta name="description" content="Spark StandAlone">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spark On YARN">
-<meta property="og:url" content="http://example.com/2023/06/14/Spark%20On%20YARN/index.html">
+<meta property="og:title" content="Spark StandAlone">
+<meta property="og:url" content="http://example.com/2023/06/14/Spark%20StandAlone/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Spark On YARN">
+<meta property="og:description" content="Spark StandAlone">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/06/14/Spark%20On%20YARN/p1.png">
-<meta property="og:image" content="http://example.com/2023/06/14/Spark%20On%20YARN/p2.png">
-<meta property="og:image" content="http://example.com/2023/06/14/Spark%20On%20YARN/p3.png">
-<meta property="article:published_time" content="2023-06-14T02:10:10.856Z">
-<meta property="article:modified_time" content="2023-06-14T02:31:28.012Z">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p1.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p2.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p3.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p4.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p5.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p6.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p7.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p8.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p9.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p10.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p11.png">
+<meta property="og:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p12.png">
+<meta property="article:published_time" content="2023-06-14T02:39:37.743Z">
+<meta property="article:modified_time" content="2023-06-14T02:59:02.371Z">
 <meta property="article:author" content="panzihan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/14/Spark%20On%20YARN/p1.png">
+<meta name="twitter:image" content="http://example.com/2023/06/14/Spark%20StandAlone/p1.png">
   <link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/9.15.8/styles/atom-one-dark.min.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
   <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
@@ -39,7 +48,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1686711555455">
+  <link rel="stylesheet" href="/css/style.css?v=1686711555451">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -192,15 +201,15 @@
     
         <div class="nexmoe-post-cover"
              style="padding-bottom: 24.305555555555554%;">
-            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Spark On YARN" class="lazyload">
-            <h1>Spark On YARN</h1>
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Spark StandAlone" class="lazyload">
+            <h1>Spark StandAlone</h1>
         </div>
     
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月14日</a>
-    <a><i class="nexmoefont icon-areachart"></i>87 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>617 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
 </div>
 
         <div class="nexmoe-post-right">
@@ -208,11 +217,23 @@
         </div>
 
         <article>
-            <p>Spark On YARN</p>
+            <p>Spark StandAlone</p>
 <span id="more"></span>
 
-<p>(1）确保HADOOP_CONF_DIR和YARN_CONF_DIR在spark-env.sh 以及环境变量配置文件中<br>(2）bin&#x2F;pyspark –master yarn –deploy-mode client|cluster</p>
-<h1 id="–deploy-mode-选项是指定部署模式-默认是-客户端模式"><a href="#–deploy-mode-选项是指定部署模式-默认是-客户端模式" class="headerlink" title="–deploy-mode 选项是指定部署模式, 默认是 客户端模式"></a>–deploy-mode 选项是指定部署模式, 默认是 客户端模式</h1><h1 id="client就是客户端模式"><a href="#client就是客户端模式" class="headerlink" title="client就是客户端模式"></a>client就是客户端模式</h1><h1 id="cluster就是集群模式"><a href="#cluster就是集群模式" class="headerlink" title="cluster就是集群模式"></a>cluster就是集群模式</h1><h1 id="–deploy-mode-仅可以用在YARN模式下"><a href="#–deploy-mode-仅可以用在YARN模式下" class="headerlink" title="–deploy-mode 仅可以用在YARN模式下"></a>–deploy-mode 仅可以用在YARN模式下</h1><p><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20On%20YARN/p1.png" alt="Spark On YARN" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20On%20YARN/p2.png" alt="Spark On YARN" class="lazyload"><br>（3）bin&#x2F;spark-shell –master yarn –deploy-mode client|cluster<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20On%20YARN/p3.png" alt="Spark On YARN" class="lazyload"></p>
+<p>1.进入spark配置文件目录中：cd  spark&#x2F;conf<br>配置workers文件:<br>（1）改名, 去除.template后缀：mv workers.template workers<br>（2）编辑worker文件：vim workers<br>（3）删除localhost, 添加node1，node2，node3到workers文件内</p>
+<p>2.配置spark-env.sh文件</p>
+<p>（1）改名<br>mv spark-env.sh.template spark-env.sh<br>（2）编辑spark-env.sh, 在底部追加如下内容<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p1.png" alt="Spark StandAlone HA" class="lazyload"><br>3.在HDFS上创建程序运行历史记录存放的文件夹:<br>hadoop fs -mkdir &#x2F;sparklog<br>hadoop fs -chmod 777 &#x2F;sparklog<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p2.png" alt="Spark StandAlone HA" class="lazyload"><br>4.配置spark-defaults.conf文件</p>
+<h1 id="1-改名"><a href="#1-改名" class="headerlink" title="1. 改名"></a>1. 改名</h1><p>mv spark-defaults.conf.template spark-defaults.conf<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p3.png" alt="Spark StandAlone HA" class="lazyload"></p>
+<h1 id="2-修改内容-追加如下内容"><a href="#2-修改内容-追加如下内容" class="headerlink" title="2. 修改内容, 追加如下内容"></a>2. 修改内容, 追加如下内容</h1><h1 id="开启spark的日期记录功能"><a href="#开启spark的日期记录功能" class="headerlink" title="开启spark的日期记录功能"></a>开启spark的日期记录功能</h1><p>spark.eventLog.enabled 	true</p>
+<h1 id="设置spark日志记录的路径"><a href="#设置spark日志记录的路径" class="headerlink" title="设置spark日志记录的路径"></a>设置spark日志记录的路径</h1><p>spark.eventLog.dir	 hdfs:&#x2F;&#x2F;node1:8020&#x2F;sparklog&#x2F; </p>
+<h1 id="设置spark日志是否启动压缩"><a href="#设置spark日志是否启动压缩" class="headerlink" title="设置spark日志是否启动压缩"></a>设置spark日志是否启动压缩</h1><p>spark.eventLog.compress 	true<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p4.png" alt="Spark StandAlone HA" class="lazyload"><br>将Spark安装文件夹，分发到node1,node2上<br>scp -r spark-3.1.2-bin-hadoop3.2 node2:&#x2F;export&#x2F;server&#x2F;<br>scp -r spark-3.1.2-bin-hadoop3.2 node3:&#x2F;export&#x2F;server&#x2F;<br>分别在node2，node3设置软连接：<br>ln -s &#x2F;export&#x2F;server&#x2F;spark-3.1.2-bin-hadoop3.2 &#x2F;export&#x2F;server&#x2F;spark<br>启动历史服务器<br>sbin&#x2F;start-history-server.sh<br>启动Spark的Master和worker进程</p>
+<h1 id="启动全部master和worker"><a href="#启动全部master和worker" class="headerlink" title="启动全部master和worker"></a>启动全部master和worker</h1><p>sbin&#x2F;start-all.sh<br>查看Master的WEB UI</p>
+<p>Spark StandAlone环境部署<br>1.进入spark配置文件目录中：cd  spark&#x2F;conf<br>配置workers文件:<br>（1）改名, 去除.template后缀：mv workers.template workers<br>（2）编辑worker文件：vim workers<br>（3）删除localhost, 添加node1，node2，node3到workers文件内<br>2.配置spark-env.sh文件<br>（1）改名<br>mv spark-env.sh.template spark-env.sh<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p5.png" alt="Spark StandAlone HA" class="lazyload"><br>（3）编辑spark-env.sh, 在底部追加如下内容<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p6.png" alt="Spark StandAlone HA" class="lazyload"><br>3.在HDFS上创建程序运行历史记录存放的文件夹:<br>hadoop fs -mkdir &#x2F;sparklog<br>hadoop fs -chmod 777 &#x2F;sparklog<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p7.png" alt="Spark StandAlone HA" class="lazyload"><br>4.配置spark-defaults.conf文件</p>
+<h1 id="1-改名-1"><a href="#1-改名-1" class="headerlink" title="1. 改名"></a>1. 改名</h1><p>mv spark-defaults.conf.template spark-defaults.conf<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p8.png" alt="Spark StandAlone HA" class="lazyload"></p>
+<h1 id="2-修改内容-追加如下内容-1"><a href="#2-修改内容-追加如下内容-1" class="headerlink" title="2. 修改内容, 追加如下内容"></a>2. 修改内容, 追加如下内容</h1><h1 id="开启spark的日期记录功能-1"><a href="#开启spark的日期记录功能-1" class="headerlink" title="开启spark的日期记录功能"></a>开启spark的日期记录功能</h1><p>spark.eventLog.enabled 	true</p>
+<h1 id="设置spark日志记录的路径-1"><a href="#设置spark日志记录的路径-1" class="headerlink" title="设置spark日志记录的路径"></a>设置spark日志记录的路径</h1><p>spark.eventLog.dir	 hdfs:&#x2F;&#x2F;node1:8020&#x2F;sparklog&#x2F; </p>
+<h1 id="设置spark日志是否启动压缩-1"><a href="#设置spark日志是否启动压缩-1" class="headerlink" title="设置spark日志是否启动压缩"></a>设置spark日志是否启动压缩</h1><p>spark.eventLog.compress 	true<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p9.png" alt="Spark StandAlone HA" class="lazyload"><br>将Spark安装文件夹，分发到node1,node2上<br>scp -r spark-3.1.2-bin-hadoop3.2 node2:&#x2F;export&#x2F;server&#x2F;<br>scp -r spark-3.1.2-bin-hadoop3.2 node3:&#x2F;export&#x2F;server&#x2F;<br>分别在node2，node3设置软连接：<br>ln -s &#x2F;export&#x2F;server&#x2F;spark-3.1.2-bin-hadoop3.2 &#x2F;export&#x2F;server&#x2F;spark<br>启动历史服务器<br>sbin&#x2F;start-history-server.sh<br>启动Spark的Master和worker进程</p>
+<h1 id="启动全部master和worker-1"><a href="#启动全部master和worker-1" class="headerlink" title="启动全部master和worker"></a>启动全部master和worker</h1><p>sbin&#x2F;start-all.sh<br>查看Master的WEB UI<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p10.png" alt="Spark StandAlone HA" class="lazyload"><br>连接到StandAlone集群<br>bin&#x2F;pyspark –master spark:&#x2F;&#x2F;node1:7077<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p11.png" alt="Spark StandAlone HA" class="lazyload"><br>查看历史服务器WEB UI<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/Spark%20StandAlone/p12.png" alt="Spark StandAlone HA" class="lazyload"></p>
 
         </article>
 
@@ -221,7 +242,7 @@
   <div class="nexmoe-post-copyright">
     <strong>本文作者：</strong>panzihan<br>
     
-    <strong>本文链接：</strong><a href="http://example.com/2023/06/14/Spark%20On%20YARN/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;14&#x2F;Spark%20On%20YARN&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;14&#x2F;Spark%20On%20YARN&#x2F;</a><br>
+    <strong>本文链接：</strong><a href="http://example.com/2023/06/14/Spark%20StandAlone/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;14&#x2F;Spark%20StandAlone&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;14&#x2F;Spark%20StandAlone&#x2F;</a><br>
 
     
       <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
@@ -965,7 +986,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1686711555456"></script>
+<script src="/js/app.js?v=1686711555453"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
