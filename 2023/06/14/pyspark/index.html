@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>pyspark - Hexo</title>
+  <title>Spark(Pyspark基础编码环境) - Hexo</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -18,23 +18,22 @@
   <link rel="shortcut icon" href="/images/head/head.jpg" type="image/png" />
   <meta name="description" content="pyspark">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pyspark">
+<meta property="og:title" content="Spark(Pyspark基础编码环境)">
 <meta property="og:url" content="http://example.com/2023/06/14/pyspark/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="pyspark">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/06/14/pyspark/p1.png">
-<meta property="og:image" content="http://example.com/2023/06/14/pyspark/p2.png">
-<meta property="og:image" content="http://example.com/2023/06/14/pyspark/p3.png">
-<meta property="og:image" content="http://example.com/2023/06/14/pyspark/p4.png">
-<meta property="og:image" content="http://example.com/2023/06/14/pyspark/p5.jpg">
-<meta property="og:image" content="http://example.com/2023/06/14/pyspark/p6.jpg">
-<meta property="og:image" content="http://example.com/2023/06/14/pyspark/p7.png">
+<meta property="og:image" content="http://example.com/2023/06/14/pyspark/py1.png">
+<meta property="og:image" content="http://example.com/2023/06/14/pyspark/py2.png">
+<meta property="og:image" content="http://example.com/2023/06/14/pyspark/py3.png">
+<meta property="og:image" content="http://example.com/2023/06/14/pyspark/py4.png">
+<meta property="og:image" content="http://example.com/2023/06/14/pyspark/py5.png">
+<meta property="og:image" content="http://example.com/2023/06/14/pyspark/py6.png">
 <meta property="article:published_time" content="2023-06-14T01:21:36.486Z">
-<meta property="article:modified_time" content="2023-06-14T02:07:51.292Z">
+<meta property="article:modified_time" content="2023-06-10T13:27:32.761Z">
 <meta property="article:author" content="panzihan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/14/pyspark/p1.png">
+<meta name="twitter:image" content="http://example.com/2023/06/14/pyspark/py1.png">
   <link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/9.15.8/styles/atom-one-dark.min.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
   <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
@@ -43,7 +42,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1687589284198">
+  <link rel="stylesheet" href="/css/style.css?v=1687601518474">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -68,7 +67,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div class="nexmoe-count-item"><span>文章</span>11 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div class="nexmoe-count-item"><span>文章</span>18 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
         <div class="nexmoe-count-item"><span>标签</span>0<div class="item-radius"></div><div class="item-radius item-right"></div></div>
         <div class="nexmoe-count-item"><span>分类</span>0<div class="item-radius"></div><div class="item-radius item-right"></div></div>
     </div>
@@ -156,7 +155,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">11</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">18</span></li></ul>
     </div>
   </div>
 
@@ -196,14 +195,14 @@
     
         <div class="nexmoe-post-cover"
              style="padding-bottom: 24.305555555555554%;">
-            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="pyspark" class="lazyload">
-            <h1>pyspark</h1>
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Spark(Pyspark基础编码环境)" class="lazyload">
+            <h1>Spark(Pyspark基础编码环境)</h1>
         </div>
     
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月14日</a>
-    <a><i class="nexmoefont icon-areachart"></i>68 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>58 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -214,8 +213,7 @@
         <article>
             <p>pyspark</p>
 <span id="more"></span>
-
-<p>（1）PyCharm配置Python解释器<br>1.配置本地解释器<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/p1.png" alt="pyspark" class="lazyload"><br>2.配置远程SSH Linux解释器<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/p2.png" alt="pyspark" class="lazyload"><br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/p3.png" alt="pyspark" class="lazyload"><br>3.设置虚拟机python环境路径<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/p4.png" alt="pyspark" class="lazyload"><br>（2）WordCount代码实战<br>1.在本地读取words文件<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/p5.jpg" alt="pyspark" class="lazyload"><br>2.在node1上读取words文件<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/p6.jpg" alt="pyspark" class="lazyload"><br>3.在HDFS集群上读取words文件<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/p7.png" alt="pyspark" class="lazyload"></p>
+<p>（1）PyCharm配置Python解释器<br>1.配置本地解释器<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/py1.png" alt="pyspark" class="lazyload"><br>2.配置远程SSH Linux解释器<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/py2.png" alt="pyspark" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/py3.png" alt="pyspark" class="lazyload"><br>3.设置虚拟机python环境路径<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/py4.png" alt="pyspark" class="lazyload"><br>（2）WordCount代码实战<br>1.在本地读取words文件<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/py5.png" alt="pyspark" class="lazyload"><br>2.在node1上读取words文件<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/pyspark/py6.png" alt="pyspark" class="lazyload"></p>
 
         </article>
 
@@ -968,7 +966,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1687589284199"></script>
+<script src="/js/app.js?v=1687601518475"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
